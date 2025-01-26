@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="theme-color" content="#25a9fc" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>Number Guessing Game</title>
+        <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+            rel="stylesheet"
+        />
+        <script
+            defer
+            src="app.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+        <script
+            defer
+            src="sound.js"
+            type="text/javascript"
+            charset="utf-8"
+        ></script>
+    </head>
+    <body>
+        <h1 class="heading">Number Guessing Game</h1>
+        <section class="gameContaner">
+            <div id="gameDisplay" class="gameDisplay" aria-live="polite">
+                <div class="gameIntroction">
+                    <p>
+                        Click the Play button belowe to start playing the game
+                    </p>
+                    <br />
+                    <br />
+                    <p>
+                        Click the Arrow button belowe to get help on how to play
+                        the game
+                    </p>
+                </div>
+                <!-- <div class="gameBtn">
+                    <button class="option" type="button">1</button>
+                    <button class="option" type="button">2</button>
+                    <button class="option" type="button">3</button>
+                    <button class="option" type="button">4</button>
+                    <button class="option" type="button">5</button>
+                    <button class="option" type="button">6</button>
+                    <button class="option" type="button">7</button>
+                    <button class="option" type="button">8</button>
+                    <button class="option" type="button">9</button>
+                    <button class="option" type="button">10</button>
+                </div> -->
+            </div>
+            <div class="gameControls">
+                <button id="playGame" class="playGame playBtn" type="button">
+                    Play
+                </button>
+                <div class="score playGame">
+                    <button id="scores" class="scores" type="button"></button>
+                    <span>score</span>
+                </div>
+            </div>
+        </section>
+
+        <nav class="nav">
+            <div class="btn">
+                <button type="button" class="navBtn data">
+                    <span>Score</span><span class="value S">0</span>
+                </button>
+                <button type="button" class="navBtn data">
+                    <span>Play Times</span><span class="value playTimes"></span>
+                </button>
+                <button type="button" class="navBtn data">
+                    <span>Correct Gues Times</span
+                    ><span class="value cgt"></span>
+                </button>
+                <button type="button" class="navBtn data">
+                    <span>Wrong Gues Times</span><span class="value wgt"></span>
+                </button>
+                <button type="button" class="resetBtn data">
+                    Reset/Restart Game
+                </button>
+            </div>
+            <div class="info">
+                <h3 class="infoHead">How To Play</h3>
+                <div class="infoBody">
+                    <p>
+                        When you click the 'Play' button, the computer will
+                        randomly select a number between 1 and 10. Ten buttons
+                        will appear on the screen for you to choose the number
+                        you think the computer selected. If you guess correctly,
+                        you earn 5 points. Click the arrow button on the screen
+                        to view your stats, including total plays, correct
+                        guesses, wrong guesses, and your score.
+                    </p>
+                </div>
+            </div>
+        </nav>
+
+        <div id="icon" class="navIcon" onclick="togolManu()">
+            <img class="icon" src="./imgs/6188621.png" alt="manu icon" />
+        </div>
+
+        <footer class="footer">
+            <b></b>
+        </footer>
+
+        <div class="soundControls">
+            <div class="sCHead">
+                <b>Mute</b>
+            </div>
+            <div class="sCBtn">
+                <b id="muteMusic">music</b>
+                <b id="muteSound">sound</b>
+            </div>
+        </div>
+
+        <script type="text/javascript" charset="utf-8">
+            const nav = document.querySelector(".nav");
+            const icon = document.querySelector(".icon");
+            function togolManu() {
+                if (!nav.style.top || nav.style.top === "-1100px") {
+                    nav.style.top = "0";
+                    icon.style.rotate = "180deg";
+                } else {
+                    nav.style.top = "-1100px";
+                    icon.style.rotate = "0deg";
+                }
+            }
+
+            document.querySelector(
+                "b"
+            ).innerHTML = `©️ ${new Date().getFullYear()} Ambu Nelly. All
+            rights reserved.`;
+        </script>
+    </body>
+</html>

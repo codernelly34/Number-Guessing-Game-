@@ -1,0 +1,336 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    padding: 4px;
+    font-family: "Poppins", sans-serif;
+}
+
+.heading {
+    font-family: "Poppins", sans-serif; /* Modern and clean font */
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff;
+    text-align: center;
+    text-transform: uppercase;
+    background-image: linear-gradient(
+        120deg,
+        #25a9fc,
+        #6a11cb
+    ); /* Gradient background */
+    margin: 10px 0;
+    letter-spacing: 2px;
+}
+
+.gameIntroction,
+.success,
+.faild {
+    font-family: "Poppins", sans-serif;
+}
+
+.playGame,
+.option {
+    font-family: "Poppins", sans-serif;
+}
+
+.gameContaner {
+    height: 60vh;
+    /* background-color: darkslateblue; */
+    background-image: linear-gradient(
+        -325deg,
+        hsl(240deg 97% 55%) 0%,
+        hsl(240deg 97% 65%) 32%,
+        hsl(240deg 97% 70%) 59%,
+        hsl(240deg 96% 75%) 74%,
+        hsl(240deg 96% 79%) 84%,
+        hsl(240deg 96% 82%) 90%,
+        hsl(240deg 96% 85%) 94%,
+        hsl(240deg 96% 88%) 97%,
+        hsl(240deg 96% 91%) 99%,
+        hsl(240deg 96% 93%) 100%,
+        hsl(240deg 96% 96%) 100%,
+        hsl(240deg 95% 98%) 100%,
+        hsl(0deg 0% 100%) 100%
+    ); /* Gradient background */
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center; /* Vertical centering */
+    flex-direction: column;
+    gap: 15px;
+}
+
+.gameContaner .gameDisplay {
+    height: 45vh;
+    width: 100%;
+    background-color: transparent;
+    backdrop-filter: blur(100px);
+    box-shadow: 0px 0px 3px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.gameContaner .gameDisplay .gameIntroction {
+    color: whitesmoke;
+    text-align: center;
+    opacity: 0.6;
+}
+.gameContaner .gameDisplay .gameIntroction2 {
+    color: whitesmoke;
+    text-align: center;
+    opacity: 0.8;
+    font-weight: 700;
+}
+
+.gameContaner .gameDisplay .success {
+    background-color: #d4edda; /* Light green */
+    color: #155724; /* Dark green text */
+    border: 1px solid #c3e6cb; /* Green border */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.gameContaner .gameDisplay .faild {
+    background-color: #f8d7da; /* Light red */
+    color: #721c24; /* Dark red text */
+    border: 1px solid #f5c6cb; /* Red border */
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.gameContaner .gameDisplay .gameBtn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    column-gap: 3rem;
+    row-gap: 15px;
+}
+
+.gameContaner .gameDisplay .gameBtn .option {
+    height: 2.3rem;
+    width: 35%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: green;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 7px;
+    transition: 0.3s ease;
+    text-align: center;
+}
+
+.gameContaner .gameDisplay .option:hover {
+    background-color: black;
+}
+
+.gameContaner .gameDisplay .option:active {
+    rotate: 360deg;
+    transform: scale(0.5);
+}
+
+.gameContaner .gameControls {
+    height: 10vh;
+    width: 100%;
+    background-color: #4f74b7a7;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: row;
+    gap: 1rem;
+    padding: 8px;
+}
+
+.gameContaner .gameControls .playGame {
+    height: 3rem;
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: red;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 1px;
+}
+
+.gameContaner .gameControls .playBtn {
+    transition: 0.2s ease;
+}
+
+.gameContaner .gameControls .playBtn:active {
+    background-color: #e5e75890;
+    transform: scale(0.85);
+    rotate: -10deg;
+}
+
+.gameContaner .gameControls .score {
+    height: 3rem;
+    width: 110%;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: column;
+}
+.gameContaner .gameControls .score .scores {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+    background-color: transparent;
+    color: white;
+    border: none;
+}
+
+.gameContaner .gameControls .score span {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+    box-shadow: 0px 0px 5px inset;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: black;
+}
+
+.nav {
+    position: absolute;
+    top: -1100px;
+    left: 0;
+    height: 87vh;
+    width: 100%;
+    background-color: blueviolet;
+    box-shadow: 0px 0px 20px;
+    transition: top 1s ease-in-out;
+}
+
+.nav .btn {
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: column;
+    gap: 15px;
+    margin: 2rem 5px 0 5px;
+    transition: 0.5s ease;
+}
+
+.nav .btn .navBtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    flex-direction: row;
+}
+
+.nav .btn .resetBtn {
+    width: 100%;
+    transition: 1s ease;
+}
+
+.nav .btn .resetBtn:active {
+    transform: scale(0.6);
+}
+
+.nav .btn .data {
+    height: 3rem;
+    padding: 0 5px;
+    border: none;
+    font-size: 1rem;
+    font-weight: 600;
+    border-radius: 5px;
+    color: white;
+    background-image: linear-gradient(
+        120deg,
+        #2575fc,
+        #6d4010
+    ); /* Gradient background */
+}
+
+.nav .btn .data .value {
+    font-size: 1.7rem;
+    font-weight: 700;
+}
+.navIcon {
+    position: absolute;
+    top: 75%;
+    left: 85%;
+}
+
+.navIcon .icon {
+    border-radius: 50%;
+    width: 90%;
+    height: auto;
+    transition: 0.7s;
+}
+
+.navIcon .icon:active {
+    background-color: #e5e75890;
+    transform: scale(2);
+}
+
+.nav .info .infoHead {
+    color: white;
+    text-align: center;
+    margin-top: 23px;
+}
+.nav .info .infoBody {
+    color: white;
+    opacity: 0.8;
+    padding: 6px;
+    font-size: 14px;
+}
+
+.footer {
+    position: absolute;
+    bottom: 2%;
+    font-size: 14px;
+    left: 10%;
+}
+
+.soundControls {
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    margin-top: 1.4rem;
+    margin-left: 15px;
+    border-radius: 2px;
+    box-shadow: 0px 0px 2px;
+}
+
+.soundControls .sCHead {
+    text-align: center;
+    padding: 5px 0;
+    font-weight: 700;
+    border-bottom: 1px solid black;
+}
+
+.soundControls .sCBtn {
+    text-align: center;
+    padding: 15px 0;
+}
+.soundControls .sCBtn b {
+    background-color: lightsalmon;
+    padding: 4px 18px;
+    color: #202086;
+    border-radius: 3px;
+    margin: 0 7px;
+}
+
+.soundControls .sCBtn #muteSound {
+    text-decoration-thickness: 2px;
+    transition: 5s;
+}
+
+/* rebeccapurple */
