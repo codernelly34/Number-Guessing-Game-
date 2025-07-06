@@ -101,9 +101,20 @@
         <b class="footerText"></b>
       </footer>
     </main>
-    <script src="app.js" type="text/javascript" charset="utf-8"></script>
-    <script src="sound.js" type="text/javascript" charset="utf-8"></script>
     <script type="text/javascript" charset="utf-8">
+      if ("serviceWorker" in navigator) {
+        window.addEventListener("load", () => {
+          navigator.serviceWorker
+            .register("/service-worker.js")
+            .then((registration) => {
+              console.log("Service Worker registered:", registration);
+            })
+            .catch((error) => {
+              console.error("Service Worker registration failed:", error);
+            });
+        });
+      }
+
       const nav = document.querySelector(".nav");
       const icon = document.querySelector(".icon");
       function toggleMenu() {
@@ -121,6 +132,8 @@
       ).innerHTML = `©️ ${new Date().getFullYear()} Ambu Nelly. All
             rights reserved.`;
     </script>
-    <script src="https://polyfill.io/v3/polyfill.min.js"></script>
+    <script src="app.js" type="text/javascript" charset="utf-8"></script>
+    <script src="sound.js" type="text/javascript" charset="utf-8"></script>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js"></script> -->
   </body>
 </html>
