@@ -95,6 +95,31 @@
         <div id="icon" class="navIcon" onclick="toggleMenu()">
           <img class="icon" src="./public/imgs/6188621.png" alt="menu icon" />
         </div>
+        <style>
+          #icon {
+  animation: shake 0.4s ease-in-out infinite;
+  animation-delay: 2s; /* Wait before first run */
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
+  animation-timing-function: ease-in-out;
+  animation-name: shake;
+  animation-duration: 0.4s;
+  animation-iteration-count: infinite;
+  animation-delay: 2s;
+}
+
+/* Define the shake keyframes */
+@keyframes shake {
+  0% { transform: translateX(0); }
+  20% { transform: translateX(-4px); }
+  40% { transform: translateX(4px); }
+  60% { transform: translateX(-4px); }
+  80% { transform: translateX(4px); }
+  100% { transform: translateX(0); }
+}
+        </style>
       </section>
 
       <footer class="footer">
