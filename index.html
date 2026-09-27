@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,29 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link rel="manifest" href="/manifest.json" />
     <meta name="theme-color" content="#0d6efd" />
-  <!-- Title of the preview -->
-  <meta property="og:title" content="Number Guessing Game" />
+    <!-- Title of the preview -->
+    <meta property="og:title" content="Number Guessing Game" />
 
-  <!-- Description under the title -->
-  <meta property="og:description" content="Test your ability to guess numbers" />
+    <!-- Description under the title -->
+    <meta
+      property="og:description"
+      content="Test your ability to guess numbers"
+    />
 
-  <!-- Image that shows in the preview -->
-  <meta property="og:image" content="https://number-guessing-game2.pages.dev/public/icons/icon-192.png" />
+    <!-- Image that shows in the preview -->
+    <meta
+      property="og:image"
+      content="https://number-guessing-game2.pages.dev/public/icons/icon-192.png"
+    />
 
-  <!-- The link URL -->
-  <meta property="og:url" content="https://number-guessing-game2.pages.dev" />
+    <!-- The link URL -->
+    <meta property="og:url" content="https://number-guessing-game2.pages.dev" />
 
-  <!-- Type of content (website, article, product, etc.) -->
-  <meta property="og:type" content="website" />
+    <!-- Type of content (website, article, product, etc.) -->
+    <meta property="og:type" content="website" />
 
-  <!-- (Optional) Favicon / tab icon -->
-  <link rel="icon" href="./public/icons/icon-192.png" type="image/png" />
+    <!-- (Optional) Favicon / tab icon -->
+    <link rel="icon" href="./public/icons/icon-192.png" type="image/png" />
     <title>Number Guessing Game</title>
     <link rel="stylesheet" href="./style.css" type="text/css" media="all" />
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
       rel="stylesheet"
     />
+    <script defer src="app.js" type="text/javascript" charset="utf-8"></script>
+    <script
+      defer
+      src="sound.js"
+      type="text/javascript"
+      charset="utf-8"
+    ></script>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js"></script> -->
   </head>
   <body>
     <main class="main">
@@ -112,20 +126,34 @@
         <div id="icon" class="navIcon" onclick="toggleMenu()">
           <img class="icon" src="./public/imgs/6188621.png" alt="menu icon" />
         </div>
-        <style>#icon {
-  animation: shakeY 2s ease-in-out infinite;
-}
+        <style>
+          #icon {
+            animation: shakeY 2s ease-in-out infinite;
+          }
 
-/* Shake happens at the start of each 2s cycle */
-@keyframes shakeY {
-  0%, 90%, 100% { transform: translateY(0); }
-  10% { transform: translateY(-4px); }
-  20% { transform: translateY(4px); }
-  30% { transform: translateY(-4px); }
-  40% { transform: translateY(4px); }
-  50% { transform: translateY(0); }
-}
-          
+          /* Shake happens at the start of each 2s cycle */
+          @keyframes shakeY {
+            0%,
+            90%,
+            100% {
+              transform: translateY(0);
+            }
+            10% {
+              transform: translateY(-4px);
+            }
+            20% {
+              transform: translateY(4px);
+            }
+            30% {
+              transform: translateY(-4px);
+            }
+            40% {
+              transform: translateY(4px);
+            }
+            50% {
+              transform: translateY(0);
+            }
+          }
         </style>
       </section>
 
@@ -159,13 +187,9 @@
         }
       }
 
-      document.querySelector(
-        ".footerText"
-      ).innerHTML = `©️ ${new Date().getFullYear()} Ambu Nelly. All
+      document.querySelector(".footerText").innerHTML =
+        `©️ ${new Date().getFullYear()} Ambu Nelly. All
             rights reserved.`;
     </script>
-    <script src="app.js" type="text/javascript" charset="utf-8"></script>
-    <script src="sound.js" type="text/javascript" charset="utf-8"></script>
-    <!-- <script src="https://polyfill.io/v3/polyfill.min.js"></script> -->
   </body>
 </html>
