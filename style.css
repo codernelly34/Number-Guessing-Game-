@@ -197,9 +197,12 @@ body {
   justify-content: space-between;
 
   .navIcon {
-    width: 80px;
+    width: 40px;
     overflow: hidden;
     z-index: 50;
+    margin-top: 60px;
+    @media screen and (min-width: 768px) {
+    }
     img {
       display: block;
       width: inherit;
@@ -213,11 +216,12 @@ body {
   z-index: 40;
   top: -1100px;
   left: 0;
-  height: 87vh;
+  /* height: 87vh; */
   width: 100%;
   background-color: blueviolet;
   transition: top 300ms linear;
   border-radius: 4px;
+  box-shadow: 5px 5px 15px rgb(7, 26, 37);
 }
 
 .nav .btn {
@@ -274,9 +278,14 @@ body {
 }
 .nav .info .infoBody {
   color: white;
-  opacity: 0.8;
-  padding: 6px;
+  /* opacity: 0.8; */
+  padding: 8px;
   font-size: 14px;
+  line-height: 1.8;
+  @media screen and (min-width: 768px) {
+    font-size: 18px;
+    padding: 12px;
+  }
 }
 
 .soundControls {
